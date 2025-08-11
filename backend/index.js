@@ -16,6 +16,8 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms - 
   skip: function (req, res) {return res.method === "POST"}
 }));
 
+app.use(express.static('dist'))
+
 let persons = [
     { 
       "id": "1",
