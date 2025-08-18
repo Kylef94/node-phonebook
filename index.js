@@ -6,6 +6,7 @@ require('dotenv').config()
 
 const app = express()
 app.use(express.json())
+app.use(express.static('dist'))
 
 //set up DB and models
 const Person = require('./models/person')
